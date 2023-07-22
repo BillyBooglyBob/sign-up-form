@@ -1,0 +1,55 @@
+* {
+    border: 1px red solid;
+}
+
+body {
+    display: flex;
+}
+
+/* LHS logo and background */
+@font-face {
+    font-family: custom-font;
+    src: url(/fonts/Star\ Choco.ttf);
+  }
+
+.image-background {
+    flex: 1;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 33vw auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    background:rgba(255,255,255,0.2);
+    height: 20vh;
+    margin-top: 25vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-logo-cat,
+.banner-slogan {
+    opacity: 1;
+}
+
+.banner-logo-cat {
+    mix-blend-mode: multiply;
+    height: 30vh;
+    width: auto;
+}
+
+.banner-slogan {
+    font-family: custom-font;
+    font-size: 5rem;
+}
+
+/* RHS sign up form */
+.sign-up {
+    flex: 2;
+}
