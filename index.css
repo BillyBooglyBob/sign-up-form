@@ -15,7 +15,7 @@ body {
     height: 100vh;
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
-    background-size: 33vw auto;
+    background-size: 50vw auto;
 
     display: flex;
     flex-direction: column;
@@ -23,26 +23,25 @@ body {
 
 .banner {
     background:rgba(255,255,255,0.2);
-    height: 20vh;
     margin-top: 25vh;
+    flex: 1;
+    max-height: 10vh;
+    max-width: calc(100/3)vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.banner-logo-cat,
-.banner-slogan {
-    opacity: 1;
-}
-
 .banner-logo-cat {
+    flex: auto;
     mix-blend-mode: multiply;
     height: 30vh;
     width: auto;
 }
 
 .banner-slogan {
+    flex: auto;
     font-family: custom-font;
     font-size: 5rem;
 }
@@ -92,6 +91,46 @@ button, label, input {
     font-size: 100%;
 }
 
-.sign-up-form.sign-up-button {
-    display: block;
+.sign-up-form > div {
+    margin-right: 4vw;
+    margin-bottom: 2vh;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover {
+    background-color: rgb(232, 228, 228);
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="number"]:invalid,
+input[type="password"]:invalid {
+    border: 1px red solid;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="number"]:valid,
+input[type="password"]:valid {
+    border: 1px green solid;
+}
+
+.sign-up-button {
+    margin-top: 2.5vw;
+}
+
+button[type="submit"] {
+    width: 10vw;
+    height: 2vw;
+    background-color: rgb(223, 202, 206);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(234, 225, 227);
 }
